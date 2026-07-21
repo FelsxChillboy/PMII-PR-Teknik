@@ -267,6 +267,38 @@ export default async function AdminSettingsPage() {
           </div>
         </section>
 
+        {/* Background Home Page */}
+        <section className="rounded-2xl border border-forest-800/10 bg-white p-6">
+          <h2 className="font-display text-lg font-semibold text-forest-900">
+            Background Home Page
+          </h2>
+          <p className="mt-1 text-sm text-ink-soft">
+            Gambar latar belakang halaman utama website.
+          </p>
+          <div className="mt-4">
+            <label className="block text-sm font-medium text-ink-soft">
+              URL Gambar
+            </label>
+            <input
+              name="home_bg_url"
+              defaultValue={settings.home_bg_url}
+              placeholder="https://..."
+              className="mt-1 w-full rounded-lg border border-forest-800/15 bg-paper px-4 py-2.5 text-sm"
+            />
+            <p className="mt-1 text-xs text-ink-soft">
+              Upload gambar ke Galeri, lalu paste URL publik-nya di sini.
+              Disarankan ukuran 1920x1080px atau lebih besar.
+            </p>
+            {settings.home_bg_url && (
+              <img
+                src={settings.home_bg_url}
+                alt="Preview"
+                className="mt-3 h-32 w-full rounded-lg object-cover"
+              />
+            )}
+          </div>
+        </section>
+
         {/* Halaman Kontak */}
         <section className="rounded-2xl border border-forest-800/10 bg-white p-6">
           <h2 className="font-display text-lg font-semibold text-forest-900">

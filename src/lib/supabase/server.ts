@@ -31,6 +31,7 @@ const DEFAULT_SETTINGS: Record<string, string> = {
     '[{"href":"/tentang","label":"Tentang Kami"},{"href":"/program","label":"Program"},{"href":"/berita","label":"Berita"},{"href":"/galeri","label":"Galeri"},{"href":"/kontak","label":"Kontak"}]',
   footer_links:
     '[{"href":"/tentang","label":"Tentang Kami"},{"href":"/program","label":"Program"},{"href":"/berita","label":"Berita"}]',
+  home_bg_url: "",
 };
 
 export async function getSettings(): Promise<Record<string, string>> {
