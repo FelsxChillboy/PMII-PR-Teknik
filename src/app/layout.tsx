@@ -83,7 +83,7 @@ export default async function RootLayout({
             : undefined
         }
       >
-        <div className={settings.home_bg_url ? "min-h-screen bg-paper/80 backdrop-blur-sm" : ""}>
+        <div className={settings.home_bg_url ? "min-h-screen bg-paper/50 backdrop-blur-none" : ""}>
           <Navbar
             orgName={settings.org_name}
             orgLogoUrl={settings.org_logo_url}
