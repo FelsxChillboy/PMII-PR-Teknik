@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  /* === Palette: "Benang Kolaborasi" (Threads of Collaboration) ===
+     Dominant identity is deep forest green (growth, roots, gotong-royong),
+     not the generic warm-cream default. Marigold is the single loud accent
+     for action; clay-rose is a muted secondary for tags/highlights. */
+  --color-forest-950: #0f2019;
+  --color-forest-900: #16301f;
+  --color-forest-800: #1f3a2e;
+  --color-forest-700: #2e5240;
+  --color-forest-600: #3e6b54;
+  --color-forest-100: #e3ece5;
+
+  --color-marigold-500: #e8a63c;
+  --color-marigold-600: #cf8f28;
+  --color-marigold-100: #fbecd0;
+
+  --color-clay-500: #b85c4a;
+  --color-clay-100: #f3e0da;
+
+  --color-paper: #f7f4ec;
+  --color-paper-dim: #efe9db;
+  --color-ink: #1c1b17;
+  --color-ink-soft: #524f45;
+
+  --font-display: var(--font-display-loaded), ui-serif, Georgia, serif;
+  --font-body: var(--font-body-loaded), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-mono-loaded), ui-monospace, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+}
+
+::selection {
+  background: var(--color-marigold-500);
+  color: var(--color-forest-950);
+}
+
+.thread-divider {
+  width: 100%;
+  height: 40px;
+  display: block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
