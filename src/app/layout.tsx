@@ -71,21 +71,34 @@ export default async function RootLayout({
     >
       <body
         className={`${fraunces.variable} ${jakarta.variable} ${plexMono.variable} antialiased`}
+        style={
+          settings.home_bg_url
+            ? {
+                backgroundImage: `url(${settings.home_bg_url})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+                backgroundAttachment: "fixed",
+              }
+            : undefined
+        }
       >
-        <Navbar
-          orgName={settings.org_name}
-          orgLogoUrl={settings.org_logo_url}
-          links={navLinks}
-        />
-        <main>{children}</main>
-        <Footer
-          orgName={settings.org_name}
-          orgDescription={settings.org_description}
-          contactEmail={settings.contact_email}
-          contactLocation={settings.contact_location}
-          contactInstagram={settings.contact_instagram}
-          links={footerLinks}
-        />
+        <div className={settings.home_bg_url ? "min-h-screen bg-paper/80 backdrop-blur-sm" : ""}>
+          <Navbar
+            orgName={settings.org_name}
+            orgLogoUrl={settings.org_logo_url}
+            links={navLinks}
+          />
+          <main>{children}</main>
+          <Footer
+            orgName={settings.org_name}
+            orgDescription={settings.org_description}
+            contactEmail={settings.contact_email}
+            contactLocation={settings.contact_location}
+            contactInstagram={settings.contact_instagram}
+            links={footerLinks}
+          />
+        </div>
       </body>
     </html>
   );
