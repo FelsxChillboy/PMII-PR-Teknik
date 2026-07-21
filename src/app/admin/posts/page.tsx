@@ -13,7 +13,7 @@ export default async function AdminPostsPage() {
 
   return (
     <div>
-      <div className="flex items-center justify-between">
+      <div className="flex flex-wrap items-center gap-4">
         <h1 className="font-display text-2xl font-semibold text-forest-900">
           Berita
         </h1>
@@ -25,7 +25,7 @@ export default async function AdminPostsPage() {
         </Link>
       </div>
 
-      <div className="mt-6 overflow-hidden rounded-2xl border border-forest-800/10 bg-white">
+      <div className="mt-6 overflow-x-auto rounded-2xl border border-forest-800/10 bg-white">
         <table className="w-full text-left text-sm">
           <thead className="bg-paper-dim text-xs uppercase tracking-wide text-ink-soft">
             <tr>

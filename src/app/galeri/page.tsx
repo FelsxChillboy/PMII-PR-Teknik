@@ -12,7 +12,7 @@ export default async function GaleriPage() {
       <p className="font-mono text-xs uppercase tracking-widest text-clay-500">
         Galeri
       </p>
-      <h1 className="mt-3 font-display text-4xl font-semibold text-forest-900">
+      <h1 className="mt-3 font-display text-3xl sm:text-4xl font-semibold text-forest-900">
         Dokumentasi kegiatan
       </h1>
 

@@ -22,7 +22,7 @@ export default async function ProgramDetailPage({
       <p className="font-mono text-xs uppercase tracking-widest text-marigold-600">
         {program.category}
       </p>
-      <h1 className="mt-3 font-display text-4xl font-semibold text-forest-900">
+      <h1 className="mt-3 font-display text-3xl sm:text-4xl font-semibold text-forest-900">
         {program.title}
       </h1>
       <p className="mt-4 text-lg text-ink-soft">{program.summary}</p>

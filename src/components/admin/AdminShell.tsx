@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
+import { useState } from "react";
 import {
   LayoutDashboard,
   Newspaper,
@@ -10,6 +11,8 @@ import {
   Mail,
   Settings,
   LogOut,
+  Menu,
+  X,
 } from "lucide-react";
 import { createClient } from "@/lib/supabase/client";
 
@@ -25,6 +28,7 @@ const navItems = [
 export default function AdminShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const router = useRouter();
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   if (pathname === "/admin/login") {
     return <div className="min-h-screen bg-paper">{children}</div>;
@@ -39,10 +43,30 @@ export default function AdminShell({ children }: { children: React.ReactNode }) 
 
   return (
     <div className="flex min-h-screen bg-paper-dim">
-      <aside className="flex w-64 shrink-0 flex-col border-r border-forest-800/10 bg-forest-950 text-paper">
-        <div className="px-6 py-6">
-          <p className="font-display text-lg font-semibold">Akar Harapan</p>
-          <p className="font-mono text-xs text-paper/50">Panel Admin</p>
+      {sidebarOpen && (
+        <div
+          className="fixed inset-0 z-40 bg-black/50 lg:hidden"
+          onClick={() => setSidebarOpen(false)}
+        />
+      )}
+
+      <aside
+        className={`fixed inset-y-0 left-0 z-50 flex w-64 shrink-0 flex-col border-r border-forest-800/10 bg-forest-950 text-paper transition-transform lg:static lg:translate-x-0 ${
+          sidebarOpen ? "translate-x-0" : "-translate-x-full"
+        }`}
+      >
+        <div className="flex items-center justify-between px-6 py-6">
+          <div>
+            <p className="font-display text-lg font-semibold">Akar Harapan</p>
+            <p className="font-mono text-xs text-paper/50">Panel Admin</p>
+          </div>
+          <button
+            onClick={() => setSidebarOpen(false)}
+            className="lg:hidden"
+            aria-label="Tutup menu"
+          >
+            <X size={20} className="text-paper/70" />
+          </button>
         </div>
         <nav className="flex-1 space-y-1 px-3">
           {navItems.map((item) => {
@@ -55,6 +79,7 @@ export default function AdminShell({ children }: { children: React.ReactNode }) 
               <Link
                 key={item.href}
                 href={item.href}
+                onClick={() => setSidebarOpen(false)}
                 className={`flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors ${
                   active
                     ? "bg-forest-800 text-marigold-500"
@@ -76,7 +101,16 @@ export default function AdminShell({ children }: { children: React.ReactNode }) 
         </button>
       </aside>
 
-      <div className="flex-1 p-8">{children}</div>
+      <div className="flex-1 p-4 sm:p-6 lg:p-8">
+        <button
+          onClick={() => setSidebarOpen(true)}
+          className="mb-4 rounded-lg border border-forest-800/10 bg-white p-2 lg:hidden"
+          aria-label="Buka menu"
+        >
+          <Menu size={20} className="text-forest-900" />
+        </button>
+        {children}
+      </div>
     </div>
   );
 }

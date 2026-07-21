@@ -26,7 +26,7 @@ export default async function BeritaDetailPage({
           year: "numeric",
         })}
       </p>
-      <h1 className="mt-3 font-display text-4xl font-semibold text-forest-900">
+      <h1 className="mt-3 font-display text-3xl sm:text-4xl font-semibold text-forest-900">
         {post.title}
       </h1>
 

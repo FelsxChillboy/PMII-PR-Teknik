@@ -6,12 +6,12 @@ export default async function KontakPage() {
   const settings = await getSettings();
 
   return (
-    <div className="mx-auto grid max-w-5xl gap-12 px-6 py-20 md:grid-cols-2">
+    <div className="mx-auto grid max-w-5xl gap-8 px-6 py-20 md:grid-cols-2 md:gap-12">
       <div>
         <p className="font-mono text-xs uppercase tracking-widest text-clay-500">
           Kontak
         </p>
-        <h1 className="mt-3 font-display text-4xl font-semibold text-forest-900">
+        <h1 className="mt-3 font-display text-3xl sm:text-4xl font-semibold text-forest-900">
           {settings.contact_heading}
         </h1>
         <p className="mt-4 text-ink-soft">
