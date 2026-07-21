@@ -215,6 +215,7 @@ export async function updateSettings(formData: FormData) {
 
   revalidatePath("/admin/settings");
   revalidatePath("/", "layout");
+  revalidatePath("/");
   revalidatePath("/tentang");
   revalidatePath("/kontak");
   revalidatePath("/berita");
