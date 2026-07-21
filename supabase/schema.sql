@@ -82,7 +82,8 @@ insert into site_settings (key, value) values
   ('contact_heading', 'Ada pertanyaan atau ajakan kerja sama?'),
   ('contact_description', 'Kirim pesan lewat form di samping, atau hubungi kami langsung melalui kanal berikut.'),
   ('berita_heading', 'Cerita dari lapangan'),
-  ('nav_links', '[{"href":"/tentang","label":"Tentang Kami"},{"href":"/program","label":"Program"},{"href":"/berita","label":"Berita"},{"href":"/galeri","label":"Galeri"},{"href":"/kontak","label":"Kontak"}]'),
+  ('legal_products', '[]'),
+  ('nav_links', '[{"href":"/tentang","label":"Tentang Kami"},{"href":"/program","label":"Program"},{"href":"/berita","label":"Berita"},{"href":"/galeri","label":"Galeri"},{"href":"/produk-hukum","label":"Produk Hukum"},{"href":"/kontak","label":"Kontak"}]'),
   ('footer_links', '[{"href":"/tentang","label":"Tentang Kami"},{"href":"/program","label":"Program"},{"href":"/berita","label":"Berita"}]')
 on conflict (key) do nothing;
 

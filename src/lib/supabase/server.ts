@@ -28,10 +28,11 @@ const DEFAULT_SETTINGS: Record<string, string> = {
     "Kirim pesan lewat form di samping, atau hubungi kami langsung melalui kanal berikut.",
   berita_heading: "Cerita dari lapangan",
   nav_links:
-    '[{"href":"/tentang","label":"Tentang Kami"},{"href":"/program","label":"Program"},{"href":"/berita","label":"Berita"},{"href":"/galeri","label":"Galeri"},{"href":"/kontak","label":"Kontak"}]',
+    '[{"href":"/tentang","label":"Tentang Kami"},{"href":"/program","label":"Program"},{"href":"/berita","label":"Berita"},{"href":"/galeri","label":"Galeri"},{"href":"/produk-hukum","label":"Produk Hukum"},{"href":"/kontak","label":"Kontak"}]',
   footer_links:
     '[{"href":"/tentang","label":"Tentang Kami"},{"href":"/program","label":"Program"},{"href":"/berita","label":"Berita"}]',
   home_bg_url: "",
+  legal_products: "[]",
 };
 
 export async function getSettings(): Promise<Record<string, string>> {

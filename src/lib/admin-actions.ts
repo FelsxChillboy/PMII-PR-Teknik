@@ -187,6 +187,7 @@ export async function updateSettings(formData: FormData) {
     "contact_description",
     "berita_heading",
     "home_bg_url",
+    "legal_products",
     "nav_links",
     "footer_links",
   ];

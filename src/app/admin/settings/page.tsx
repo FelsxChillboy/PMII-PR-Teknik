@@ -2,6 +2,7 @@ import { getSettings } from "@/lib/supabase/server";
 import { updateSettings } from "@/lib/admin-actions";
 import TeamMembersField from "@/components/admin/TeamMembersField";
 import KeyValuePairsField from "@/components/admin/KeyValuePairsField";
+import LegalProductsField from "@/components/admin/LegalProductsField";
 
 export default async function AdminSettingsPage() {
   const settings = await getSettings();
@@ -349,6 +350,19 @@ export default async function AdminSettingsPage() {
               defaultValue={settings.berita_heading}
               className="mt-1 w-full rounded-lg border border-forest-800/15 bg-paper px-4 py-2.5 text-sm"
             />
+          </div>
+        </section>
+
+        {/* Produk Hukum */}
+        <section className="rounded-2xl border border-forest-800/10 bg-white p-6">
+          <h2 className="font-display text-lg font-semibold text-forest-900">
+            Produk Hukum
+          </h2>
+          <p className="mt-1 text-sm text-ink-soft">
+            Daftar dokumen hukum yang bisa diakses publik. Isi judul dan link Google Drive.
+          </p>
+          <div className="mt-4">
+            <LegalProductsField defaultValue={settings.legal_products} />
           </div>
         </section>
 
