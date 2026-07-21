@@ -4,6 +4,7 @@ import { getSettings } from "@/lib/supabase/server";
 interface TeamMember {
   name: string;
   role: string;
+  photo_url?: string;
 }
 
 export default async function TentangPage() {
@@ -76,7 +77,17 @@ export default async function TentangPage() {
                 key={person.name}
                 className="rounded-xl bg-paper-dim p-5 text-center"
               >
-                <div className="mx-auto h-16 w-16 rounded-full bg-forest-800/20" />
+                {person.photo_url ? (
+                  <img
+                    src={person.photo_url}
+                    alt={person.name}
+                    className="mx-auto h-20 w-20 rounded-full object-cover"
+                  />
+                ) : (
+                  <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-forest-800/20 text-sm text-ink-soft">
+                    {person.name.charAt(0)}
+                  </div>
+                )}
                 <p className="mt-3 font-display font-semibold text-forest-900">
                   {person.name}
                 </p>

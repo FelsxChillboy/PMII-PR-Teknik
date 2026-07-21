@@ -21,7 +21,7 @@ const DEFAULT_SETTINGS: Record<string, string> = {
   about_missions:
     '["Menjalankan program pendidikan non-formal untuk anak-anak","Menginisiasi penghijauan dan pengelolaan sampah warga","Membuka ruang gotong royong lintas generasi"]',
   about_team:
-    '[{"name":"Rina Setiawan","role":"Ketua Komunitas"},{"name":"Budi Prakoso","role":"Koordinator Program"},{"name":"Sari Wulandari","role":"Koordinator Relawan"}]',
+    '[{"name":"Rina Setiawan","role":"Ketua Komunitas","photo_url":""},{"name":"Budi Prakoso","role":"Koordinator Program","photo_url":""},{"name":"Sari Wulandari","role":"Koordinator Relawan","photo_url":""}]',
   favicon_url: "",
   contact_heading: "Ada pertanyaan atau ajakan kerja sama?",
   contact_description:

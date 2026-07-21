@@ -77,7 +77,7 @@ insert into site_settings (key, value) values
   ('about_intro', 'Akar Harapan lahir dari kegelisahan sekelompok warga yang melihat makin sedikitnya ruang hijau dan makin banyak anak putus sekolah di lingkungan sekitar. Dari lima orang, kini kami digerakkan oleh lebih dari seratus relawan aktif.'),
   ('about_vision', 'Lingkungan yang tumbuh berkelanjutan, di mana setiap warga punya akses yang setara terhadap pendidikan dan ruang hidup yang sehat.'),
   ('about_missions', '["Menjalankan program pendidikan non-formal untuk anak-anak","Menginisiasi penghijauan dan pengelolaan sampah warga","Membuka ruang gotong royong lintas generasi"]'),
-  ('about_team', '[{"name":"Rina Setiawan","role":"Ketua Komunitas"},{"name":"Budi Prakoso","role":"Koordinator Program"},{"name":"Sari Wulandari","role":"Koordinator Relawan"}]'),
+  ('about_team', '[{"name":"Rina Setiawan","role":"Ketua Komunitas","photo_url":""},{"name":"Budi Prakoso","role":"Koordinator Program","photo_url":""},{"name":"Sari Wulandari","role":"Koordinator Relawan","photo_url":""}]'),
   ('favicon_url', ''),
   ('contact_heading', 'Ada pertanyaan atau ajakan kerja sama?'),
   ('contact_description', 'Kirim pesan lewat form di samping, atau hubungi kami langsung melalui kanal berikut.'),
